@@ -1,0 +1,69 @@
+<view class="wrap">
+  <view class="top-wrap">
+    <view class="mess">
+      <view>Md Khairul Azam</view>
+      <view>员工ID:2017-002</view>
+    </view>
+    <view class="position">
+      <view>UI/UX 设计师</view>
+      <view>
+        <text class="iconfont icon-icon_left"></text>
+        <text class="date">2018 11</text>
+        <text class="iconfont icon-icon_right-copy"></text>
+      </view>
+    </view>
+    <view class="date-swiper">
+      <scroll-view class="scroll-view_H" scroll-x="true" >
+        <view class="date-item">
+          <view>01</view>
+          <view class="iconfont icon-dui"></view>
+        </view>
+        <view class="date-item">
+          <view>02</view>
+          <view class="iconfont icon-dui"></view>
+        </view>
+        <view class="date-item">
+          <view>03</view>
+          <view class="iconfont icon-dui"></view>
+        </view>
+        <view class="date-item">
+          <view>04</view>
+          <view class="iconfont icon-cuowu"></view>
+        </view>
+        <view class="date-item">
+          <view>04</view>
+          <view class="iconfont icon-wenhao"></view>
+        </view>
+        <view class="date-item">
+          <view>01</view>
+          <view class="iconfont icon-dui"></view>
+        </view>
+        <view class="date-item">
+          <view>02</view>
+          <view class="iconfont icon-dui"></view>
+        </view>
+        <view class="date-item">
+          <view>03</view>
+          <view class="iconfont icon-dui"></view>
+        </view>
+        <view class="date-item">
+          <view>04</view>
+          <view class="iconfont icon-cuowu"></view>
+        </view>
+        <view class="date-item">
+          <view>04</view>
+          <view class="iconfont icon-wenhao"></view>
+        </view>
+        <view class="date-item">
+          <view>04</view>
+          <view class="iconfont icon-cuowu"></view>
+        </view>
+        <view class="date-item">
+          <view>04</view>
+          <view class="iconfont icon-wenhao"></view>
+        </view>
+        
+      </scroll-view>
+    </view>
+  </view>
+</view>

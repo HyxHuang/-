@@ -1,1 +1,3 @@
-@import 'assets/fonts.wxss'
+@import 'assets/fonts.wxss';
+@import '/assets/fonts/iconfont.wxss';
+
