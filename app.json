@@ -16,31 +16,31 @@
     "list": [
       {
         "pagePath": "pages/board/board",
-        "text": "",
+        "text": " 1",
         "iconPath":"assets/images/tabbars/仪表盘.png",
         "selectedIconPath":"assets/images/tabbars/仪表盘1.png"
       },
       {
         "pagePath": "pages/notice/notice",
-        "text": "",
+        "text": " 2",
         "iconPath": "assets/images/tabbars/公告.png",
         "selectedIconPath": "assets/images/tabbars/公告1.png"
       },
       {
         "pagePath": "pages/release/release",
-        "text": "",
+        "text": " 3",
         "iconPath": "assets/images/tabbars/签到.png",
         "selectedIconPath": "assets/images/tabbars/签到1.png"
       },
       {
         "pagePath": "pages/project/project",
-        "text": "",
+        "text": " 4",
         "iconPath": "assets/images/tabbars/项目.png",
         "selectedIconPath": "assets/images/tabbars/项目1.png"
       },
       {
         "pagePath": "pages/profile/profile",
-        "text": "",
+        "text": " 5",
         "iconPath": "assets/images/tabbars/我的.png",
         "selectedIconPath": "assets/images/tabbars/我的1.png"
       }
