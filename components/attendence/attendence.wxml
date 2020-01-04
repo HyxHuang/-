@@ -1,0 +1,33 @@
+<view class="wrap">
+  <view 
+  class="top-wrap"
+  style="height:{{height}};"
+>
+		<view 
+    class="mess"
+    style="padding:{{padding}}"
+    >
+			<view style="font-size:{{titleFontSize}}">Md Khairul Azam</view>
+			<view style="font-size:{{timeFontsize}}">员工ID:2017-002</view>
+		</view>
+		<view 
+    class="position" style="padding:{{space}}">
+			<view style="font-size:{{timeFontsize}}">UI/UX 设计师</view>
+			<view style="font-size:{{positionFontsize}}">
+				<text class="iconfont icon-icon_left " style="font-size:{{positionFontsize}}" bindtap="handleChangeDate" data-type='prev'></text>
+				<text class="date">{{year}} {{month}}</text>
+				<text class="iconfont icon-icon_right-copy " style="font-size:{{positionFontsize}}" bindtap="handleChangeDate" data-type='next'></text>
+			</view>
+		</view>
+		<view class="date-swiper">
+			<scroll-view class="scroll-view_H" scroll-x="true" enable-flex>
+				<view class="date-item" style="font-size:{{positionFontsize}}" wx:for="{{day}}" wx:key="item">
+					<view style="height:{{dateHeight}};width:{{dateWidth}};line-height:{{lineheight}}" >
+            <text >{{(item+1)<10?'0'+(item+1):item+1}}</text>
+          </view>
+					<view class="iconfont icon-dui" style="font-size:{{positionFontsize}};height:{{dateHeight}};width:{{dateWidth}};line-height:{{lineheight}}" bindtap="handleClick"></view>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+</view>

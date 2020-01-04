@@ -6,6 +6,7 @@
     "pages/project/project",
     "pages/profile/profile"
   ],
+  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#224bf0",

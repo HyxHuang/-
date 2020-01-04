@@ -1,69 +1,23 @@
 <view class="wrap">
-  <view class="top-wrap">
-    <view class="mess">
-      <view>Md Khairul Azam</view>
-      <view>员工ID:2017-002</view>
-    </view>
-    <view class="position">
-      <view>UI/UX 设计师</view>
-      <view>
-        <text class="iconfont icon-icon_left"></text>
-        <text class="date">2018 11</text>
-        <text class="iconfont icon-icon_right-copy"></text>
-      </view>
-    </view>
-    <view class="date-swiper">
-      <scroll-view class="scroll-view_H" scroll-x="true" >
-        <view class="date-item">
-          <view>01</view>
-          <view class="iconfont icon-dui"></view>
-        </view>
-        <view class="date-item">
-          <view>02</view>
-          <view class="iconfont icon-dui"></view>
-        </view>
-        <view class="date-item">
-          <view>03</view>
-          <view class="iconfont icon-dui"></view>
-        </view>
-        <view class="date-item">
-          <view>04</view>
-          <view class="iconfont icon-cuowu"></view>
-        </view>
-        <view class="date-item">
-          <view>04</view>
-          <view class="iconfont icon-wenhao"></view>
-        </view>
-        <view class="date-item">
-          <view>01</view>
-          <view class="iconfont icon-dui"></view>
-        </view>
-        <view class="date-item">
-          <view>02</view>
-          <view class="iconfont icon-dui"></view>
-        </view>
-        <view class="date-item">
-          <view>03</view>
-          <view class="iconfont icon-dui"></view>
-        </view>
-        <view class="date-item">
-          <view>04</view>
-          <view class="iconfont icon-cuowu"></view>
-        </view>
-        <view class="date-item">
-          <view>04</view>
-          <view class="iconfont icon-wenhao"></view>
-        </view>
-        <view class="date-item">
-          <view>04</view>
-          <view class="iconfont icon-cuowu"></view>
-        </view>
-        <view class="date-item">
-          <view>04</view>
-          <view class="iconfont icon-wenhao"></view>
-        </view>
-        
-      </scroll-view>
-    </view>
+	<attendence 
+  height="348rpx"
+  titleFontSize="30rpx"
+  timeFontsize="28rpx"
+  positionFontsize="24rpx"
+  padding="30rpx 0"
+  dateHeight="75rpx"
+  dateWidth="68rpx"
+  lineheight="75rpx"
+  space="20rpx 0"
+  type="attendence"
+  ></attendence>
+	<view class="map-wrap">
+    <map
+      latitude="40.11717"
+      longitude="116.24533 "
+      scale="15"
+      circles="{{circle}}"
+      markers="{{marker}}"
+    ></map>
   </view>
 </view>
