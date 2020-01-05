@@ -1,19 +1,19 @@
 @import '/assets/fonts.wxss';
 .wrap{
-  padding: 0 28rpx;
+  
   background-color: #fff;
- 
+  border-radius: 10rpx;
 }
 .top-wrap{
   width: 100%;
   height: 348rpx;
-  border-radius: 10rpx;
 }
 .mess,.position{
-  /* padding: 30rpx 28rpx; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left:28rpx !important;
+  padding-right:28rpx !important;
 }
 .mess >view:first-child,
 .position >view:first-child
@@ -23,32 +23,24 @@
 }
 .mess view:last-child{
   color:#6b6b6b;
-  /* font-size: 28rpx; */
   letter-spacing: 2rpx;
 }
 
 .position >view:first-child{
   font-weight: normal;
-  /* font-size: 28rpx; */
 }
 .position >view:last-child{
-  /* height: 45rpx; */
   background-color: #dae6ff;
   display: flex;
   align-items: center;
   padding:12rpx;
-  /* font-size: 24rpx; */
   color: #464646;
   border-radius: 5rpx;
 }
 .date{
   padding: 0 22rpx;
 }
-.date-swiper{
-  /* margin-top: 28rpx; */
-  /* height: 150rpx; */
-  /* height: 100rpx; */
-}
+
 .scroll-view_H {
   white-space: nowrap;
   display: flex;
@@ -57,11 +49,8 @@
 }
 
 .date-item view {
-  /* height: 75rpx; */
   width: 68rpx;
-  /* line-height: 75rpx; */
   text-align: center;
-  /* font-size: 24rpx; */
 }
 
 .date-item>view:first-child {

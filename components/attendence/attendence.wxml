@@ -7,25 +7,25 @@
     class="mess"
     style="padding:{{padding}}"
     >
-			<view style="font-size:{{titleFontSize}}">Md Khairul Azam</view>
-			<view style="font-size:{{timeFontsize}}">员工ID:2017-002</view>
+			<view style="font-size:{{titleFontSize}}">{{name}}</view>
+			<view style="font-size:{{timeFontsize}}">员工ID:{{id}}</view>
 		</view>
 		<view 
     class="position" style="padding:{{space}}">
-			<view style="font-size:{{timeFontsize}}">UI/UX 设计师</view>
+			<view style="font-size:{{timeFontsize}}">{{position}}</view>
 			<view style="font-size:{{positionFontsize}}">
 				<text class="iconfont icon-icon_left " style="font-size:{{positionFontsize}}" bindtap="handleChangeDate" data-type='prev'></text>
 				<text class="date">{{year}} {{month}}</text>
 				<text class="iconfont icon-icon_right-copy " style="font-size:{{positionFontsize}}" bindtap="handleChangeDate" data-type='next'></text>
 			</view>
 		</view>
-		<view class="date-swiper">
+		<view class="date-swiper" style="height:{{itemHeight}}">
 			<scroll-view class="scroll-view_H" scroll-x="true" enable-flex>
-				<view class="date-item" style="font-size:{{positionFontsize}}" wx:for="{{day}}" wx:key="item">
+				<view class="date-item" style="font-size:{{positionFontsize}};height:{{itemHeight}}" wx:for="{{signList}}" wx:key="id">
 					<view style="height:{{dateHeight}};width:{{dateWidth}};line-height:{{lineheight}}" >
-            <text >{{(item+1)<10?'0'+(item+1):item+1}}</text>
+            <text class="{{(item.day===day&&~~item.month===currentMonth)?'active':''}}">{{(~~item.day)<10?'0'+(~~item.day):~~item.day}}</text>
           </view>
-					<view class="iconfont icon-dui" style="font-size:{{positionFontsize}};height:{{dateHeight}};width:{{dateWidth}};line-height:{{lineheight}}" bindtap="handleClick"></view>
+					<view class="iconfont {{item.islata===1?'icon-dui':(item.islata===2?'icon-cuowu':'icon-wenhao')}}" style="font-size:{{positionFontsize}};height:{{dateHeight}};width:{{dateWidth}};line-height:{{lineheight}}" bindtap="handleSignin" data-type="{{item.islata===3?'noSign':''}}" data-day="{{item.day}}"></view>
 				</view>
 			</scroll-view>
 		</view>

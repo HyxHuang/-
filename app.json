@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/project/project",
     "pages/release/release",
+    "pages/attendence/attendence",
     "pages/board/board",
     "pages/notice/notice",
-    "pages/project/project",
     "pages/profile/profile"
   ],
-  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#224bf0",
