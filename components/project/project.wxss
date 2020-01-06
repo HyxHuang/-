@@ -1,0 +1,55 @@
+@import '/assets/fonts.wxss';
+page{
+  background-color: #eaf1ff;
+}
+.item-wrap{
+  padding: 25rpx;
+  border: 2rpx solid #becdff;
+  border-radius: 10rpx;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+}
+.item-wrap >view:first-child{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.item-wrap >view:nth-child(2){
+  display: flex;
+  justify-content: space-between;
+  margin: 40rpx 0;
+  font-size: 28rpx;
+}
+.img-wrap{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.img-wrap image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  position: absolute;
+}
+.footer-wrap{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #585859;
+  height: 200rpx;
+  font-weight: bold;
+}
+
+.footer-wrap canvas{
+  position: absolute;
+}
+.time-wrap{
+  display: flex;
+  align-items: center;
+}
+
+.start-time{
+  margin-right: 30rpx;
+}

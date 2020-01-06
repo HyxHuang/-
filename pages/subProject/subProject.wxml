@@ -1,0 +1,58 @@
+<view class="subproject-wrap">
+	<view>上传新项目</view>
+	<view class="form-wrap">
+		<view class="title">
+			<label>项目标题</label>
+			<input></input>
+		</view>
+		<view class="describ">
+			<label>文字描述</label>
+			<textarea></textarea>
+		</view>
+		<view class="member">
+			<label>指定成员</label>
+			<view class="all-member">
+				<text bindtap="chooseMember">所有成员</text>
+				<view class="img-group">
+					<image src="/assets/images/img_03.png" style="left:0"></image>
+					<image src="/assets/images/img_03.png" style="left:50rpx"></image>
+				</view>
+			</view>
+		</view>
+		<view class="end-time">
+			<text>项目时间截点</text>
+			<view class="choose-time">
+				<text>任何时间</text>
+				<text>2020-01-06</text>
+			</view>
+		</view>
+		<view class="btn">马上上传</view>
+	</view>
+</view>
+
+<view class="dialog-wrap">
+	<view class="dialog">
+		<view>所有成员</view>
+		<checkbox-group>
+			<checkbox value="1">
+				<view class="item">
+					<image src="/assets/images/img_03.png"></image>
+					<text>1</text>
+				</view>
+			</checkbox>
+			<checkbox value="2">
+				<view class="item">
+					<image src="/assets/images/img_03.png"></image>
+					<text>2</text>
+				</view>
+			</checkbox>
+			<checkbox value="3">
+				<view class="item">
+					<image src="/assets/images/img_03.png"></image>
+					<text>3</text>
+				</view>
+			</checkbox>
+      <view class="save">马上保存</view>
+		</checkbox-group>
+	</view>
+</view>

@@ -1,15 +1,3 @@
 <view class="project-wrap">
-  <view>
-    <view>金融项目APP设计(ico)</view>
-    <view>修改</view>
-  </view>
-  <view>
-    <view>
-      <image src="/assets/images/img_03.png"></image>
-      <image src="/assets/images/img_03.png"></image>
-      <image src="/assets/images/img_03.png"></image>
-    </view>
-    <text>+12</text>
-    <text>项目进行中</text>
-  </view>
+  <project></project>
 </view>

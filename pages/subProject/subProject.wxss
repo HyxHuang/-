@@ -1,0 +1,143 @@
+page{
+  background-color: #eaf1ff;
+  height: 100%;
+  position: relative;
+}
+.subproject-wrap{
+  padding: 30rpx;
+}
+.subproject-wrap >view:first-child{
+  color: #464646;
+  margin-bottom: 30rpx;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.form-wrap{
+  background-color: #fff;
+  padding: 50rpx;
+}
+.form-wrap label,text{
+  color:#c9c9c9;
+  font-size: 28rpx;
+}
+.title{
+  display: flex;
+  border-bottom: 2rpx solid #dedede;
+  height: 80rpx;
+  margin-bottom: 30rpx;
+}
+.title label{
+  margin-right: 20rpx;
+}
+.describ{
+  border-bottom: 2rpx solid #dedede;
+  margin-bottom: 30rpx;
+}
+.describ textarea{
+  height: 150rpx;
+}
+.all-member{
+  margin-top: 20rpx;
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.all-member text{
+  padding: 20rpx 40rpx;
+  background-color: #f5f8ff;
+  border-radius: 50rpx;
+  border: 2rpx solid #e6edff;
+  margin-right: 20rpx;
+}
+.img-group{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.img-group image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  position: absolute;
+}
+.end-time >text{
+  margin-bottom: 30rpx;
+}
+.choose-time{
+  height: 82rpx;
+  margin-top: 30rpx;
+}
+.choose-time text:first-child{
+  padding: 20rpx 40rpx;
+  background-color: #f5f8ff;
+  border-radius: 50rpx;
+  border: 2rpx solid #e6edff;
+  margin-right: 20rpx;
+}
+.choose-time text:last-child{
+  color: #a9a9a9;
+  font-weight: bold;
+}
+.btn{
+  margin-top: 30rpx;
+  background-color: #2046ef;
+  color: #fff;
+  width: 200rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  border-radius: 50rpx;
+}
+
+.dialog-wrap{
+  
+  position: absolute;
+  width:100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(102, 102, 102, .6);
+}
+.dialog{
+  padding: 0 40rpx 40rpx 40rpx;
+}
+.dialog >view:first-child{
+  height: 90rpx;
+  background-color: #f5f8ff;
+  color: #6e6f71;
+  font-size: 28rpx;
+  line-height: 90rpx;
+  padding-left: 30rpx;
+}
+checkbox-group{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 30rpx;
+}
+.item{
+  padding: 20rpx 0;
+  display: flex;
+  align-items: center;
+}
+.item image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin:0 20rpx;
+}
+.item text{
+  color: #666;
+}
+.save{
+  margin-top: 30rpx;
+  background-color: #2046ef;
+  color: #fff;
+  width: 200rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  border-radius: 50rpx;
+}
+

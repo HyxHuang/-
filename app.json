@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/subProject/subProject",
     "pages/project/project",
     "pages/release/release",
     "pages/attendence/attendence",

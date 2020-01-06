@@ -1,0 +1,31 @@
+<view class="item-wrap">
+	<view>
+		<view>金融项目APP设计(ico)</view>
+		<view>修改</view>
+	</view>
+	<view>
+		<view class="img-wrap">
+			<image src="/assets/images/img_03.png" style="left:0"></image>
+			<image src="/assets/images/img_03.png" style="left:50rpx"></image>
+			<image src="/assets/images/img_03.png" style="left:100rpx"></image>
+			<text style="margin-left:{{2*50+70}}rpx">+12</text>
+		</view>
+		<text>项目进行中</text>
+	</view>
+	<view class="footer-wrap">
+		<view>
+			<canvas style="width: 200rpx; height: 200rpx;" canvas-id="firstCanvas"></canvas>
+			<canvas style="width: 200rpx; height: 200rpx;z-index:10" canvas-id="secondCanvas"></canvas>
+		</view>
+		<view class="time-wrap">
+			<view class="start-time">
+				<text class="iconfont icon-kaishishijian"></text>
+				<text>2020-01-01</text>
+			</view>
+			<view>
+				<text class="iconfont icon-jieshushijian"></text>
+				<text>2020-01-06</text>
+			</view>
+		</view>
+	</view>
+</view>
