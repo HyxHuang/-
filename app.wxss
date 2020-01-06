@@ -1,6 +1,5 @@
 @import 'assets/fonts.wxss';
 @import '/assets/fonts/iconfont.wxss';
-<<<<<<< HEAD
 @import '/assets/fonts/icon.wxss';
 .container {
   height: 100%;
@@ -11,6 +10,4 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
-=======
->>>>>>> hjj
 
