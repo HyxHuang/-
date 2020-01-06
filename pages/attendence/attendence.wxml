@@ -1,0 +1,24 @@
+<view>
+
+</view>
+<view class="wrap" wx:for="{{dataList}}">
+  <block>
+    <view class="img">
+    <image src="/assets/images/img_03.png"></image>
+  </view>
+  <attendence
+    height="220rpx"
+    titleFontSize="24rpx"
+    timeFontsize="20rpx"
+    positionFontsize="20rpx"
+    padding="15rpx 0"
+    dateHeight="50rpx"
+    dateWidth="50rpx"
+    lineheight="50rpx"
+    space="10rpx 0"
+    itemHeight="100rpx"
+  ></attendence>
+  
+  </block>
+
+</view>

@@ -1,2 +1,24 @@
-<!--pages/release/release.wxml-->
-<text>pages/release/release.wxml</text>
+<view class="wrap">
+	<attendence 
+  height="348rpx"
+  titleFontSize="30rpx"
+  timeFontsize="28rpx"
+  positionFontsize="24rpx"
+  padding="30rpx 0"
+  dateHeight="75rpx"
+  dateWidth="68rpx"
+  lineheight="75rpx"
+  space="20rpx 0"
+  itemHeight="150rpx"
+  type="attendence"
+  ></attendence>
+	<view class="map-wrap">
+    <map
+      latitude="40.11717"
+      longitude="116.24533 "
+      scale="15"
+      circles="{{circle}}"
+      markers="{{marker}}"
+    ></map>
+  </view>
+</view>
