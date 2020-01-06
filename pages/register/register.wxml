@@ -1,0 +1,23 @@
+<view class="box">
+	<text class="box-txt">请填写您的信息,完成注册</text>
+	<view class="box-lg">
+		<label class="ad">
+			<text class="label-txt"><text class="iconfont icon-icon_boss input-icon"></text>姓名</text>
+			<input value="" placeholder="您的姓名" value="{{name}}" name="name" bindinput="handleinput" data-input='name'></input>
+		</label>
+		<label>
+			<text class="label-txt"><text class="iconfont icon-password input-icon"></text>邮箱地址</text>
+			<input value="" placeholder="您的邮箱地址" value="{{email}}" name="email" bindinput="handleinput" data-input='email'></input>
+		</label>
+		<label>
+			<text class="label-txt"><text class="iconfont icon-icon_boss input-icon"></text>用户名</text>
+			<input value="" placeholder="您的用户名" value="{{username}}" bindinput="handleinput" data-input='username'></input>
+		</label>
+		<label>
+			<text class="label-txt"><text class="iconfont icon-password input-icon"></text>密码</text>
+			<input password value="" placeholder="您的密码" value="{{password}}" bindinput="handleinput" data-input='password'></input>
+		</label>
+		<button hover-class="rg-success" bindtap="handleRg">注册</button>
+		<view class="tz-lg">已经是会员？<text bindtap="handleTzToLg">点击登录</text></view>
+	</view>
+</view>

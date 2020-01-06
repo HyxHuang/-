@@ -1,0 +1,17 @@
+<!--pages/login/login.wxml-->
+
+<view class="box">
+	<text class="box-txt">使用您的用户名和密码登录</text>
+	<view class="box-lg">
+		<label>
+			<text class="label-txt"><text class="iconfont icon-icon_boss input-icon"></text>用户名</text>
+			<input placeholder="您的用户名" value="{{username}}" bindinput="handleinput" data-input='username'></input>
+		</label>
+		<label>
+			<text class="label-txt"><text class="iconfont icon-password input-icon"></text>密码</text>
+			<input password placeholder="您的密码" value="{{password}}" bindinput="handleinput" data-input='password'></input>
+		</label>
+		<button hover-class="rg-success" bindtap="handleLg">登录</button>
+		<view class="tz-lg">没有账号？<text bindtap="handleTzToLg">点击注册</text></view>
+	</view>
+</view>
