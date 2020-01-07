@@ -1,11 +1,16 @@
 // pages/notice/notice.js
+
+import { formatDay } from '../..//utils/util.js'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    notices: [],
+    yesday: '',
+    today: ''
   },
 
   /**
@@ -26,14 +31,33 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let that = this
+    wx.request({
+      url: 'http://10.9.49.228:9999/api/notice',
+      method:'get',
+      data:{
+        page:1,
+        limit:8
+      },
+      success(res){
+        let yesday = formatDay(new Date(new Date().getTime() - 86400000))
+        let today = formatDay(new Date())
+        that.setData({
+          notices:res.data.data,
+          yesday,
+          today
+        })
+      },
+      fail(error){
+        console.log(error)
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
   },
 
   /**
