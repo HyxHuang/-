@@ -4,12 +4,17 @@
 		"ignore": []
 	},
 	"setting": {
+<<<<<<< HEAD
 		"urlCheck": false,
+=======
+		"urlCheck": true,
+>>>>>>> hyx3
 		"es6": true,
 		"postcss": true,
 		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
+<<<<<<< HEAD
 		"coverView": true,
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
@@ -23,6 +28,12 @@
 			"outputPath": ""
 		},
 		"nodeModules": true
+=======
+		"autoAudits": false,
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false
+>>>>>>> hyx3
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.0",

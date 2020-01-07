@@ -1,4 +1,5 @@
 <!--pages/board/board.wxml-->
+<<<<<<< HEAD
 <view id="board">
 	<view class="view-plate">
 		<scroll-view class="scroll-plate" scroll-x='true' enable-flex>
@@ -15,3 +16,6 @@
 		</scroll-view>
 	</view>
 </view>
+=======
+<text>pages/board/board.wxml</text>
+>>>>>>> hyx3

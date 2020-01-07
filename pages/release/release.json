@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "usingComponents": {
     "attendence": "/components/attendence/attendence"
   }
+=======
+  "usingComponents": {}
+>>>>>>> hyx3
 }

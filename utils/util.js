@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+const formatDay = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+  return [year, month, day].map(formatNumber).join('-')
+}
+
+>>>>>>> hyx3
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -15,5 +28,10 @@ const formatNumber = n => {
 }
 
 module.exports = {
+<<<<<<< HEAD
   formatTime: formatTime
+=======
+  formatTime:formatTime,
+  formatDay: formatDay
+>>>>>>> hyx3
 }

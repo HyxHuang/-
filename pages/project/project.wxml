@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 <view class="project-wrap">
   <project></project>
 </view>
+=======
+<!--pages/project/project.wxml-->
+<text>pages/project/project.wxml</text>
+>>>>>>> hyx3

@@ -1,1 +1,128 @@
+<<<<<<< HEAD
 /* pages/notice/notice.wxss */
+=======
+/* pages/notice/notice.wxss */
+@import '../../weui-miniprogram/miniprogram_dist/weui-wxss/dist/style/weui.wxss';
+.addNoticeWrap{
+  padding:40rpx 30rpx;
+  background:#eaf1ff;
+}
+.header{
+  font-weight:bolder;
+  font-size:28rpx;
+}
+.addNotice{
+  background:#fff;
+  padding:50rpx 50rpx;
+  margin-top:30rpx;
+}
+input, textarea{
+  border-bottom:1px solid #ccc;
+  line-height:66rpx;
+}
+input{
+  height:66rpx;
+}
+textarea{
+  padding:20rpx 0;
+}
+button{
+  margin-top:40rpx;
+  background:#2e6cfc;
+  width:170rpx;
+  height:60rpx;
+  border-radius:40rpx; 
+}
+.noticeWrap{
+  height:100%;
+  background:#eaf1ff;
+}
+
+.listWrap{
+  padding:40rpx 30rpx;
+}
+.listTime{
+  background: #2e6cfc;
+  width:100%;
+  height:50rpx;
+  font-size:22rpx;
+  text-align: center;
+  line-height:50rpx;
+  color:white; 
+}
+.itemWrap{
+  padding:30rpx 45rpx;
+  background:#fff;
+}
+.action{
+  display: flex;
+  align-items: flex-start;
+}
+.bianji{
+  margin-right:15rpx;
+}
+Icon{
+  height:25rpx;
+}
+.time{
+  display:flex;
+  justify-content: space-between;
+  color:#c0c0c0;
+  font-size:24rpx;
+}
+.clock{
+  margin-left:10rpx;
+}
+
+.head{
+  margin:20rpx 0;
+  font-weight:bold;
+}
+.content{
+  font-size:28rpx;
+  margin-bottom:20rpx;
+}
+
+.dislike{
+  margin-left:40rpx;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 1594729 */
+  src: url('//at.alicdn.com/t/font_1594729_42e0cih4puh.eot');
+  src: url('//at.alicdn.com/t/font_1594729_42e0cih4puh.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1594729_42e0cih4puh.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1594729_42e0cih4puh.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1594729_42e0cih4puh.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1594729_42e0cih4puh.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dislike-b:before {
+  content: "\e61d";
+}
+
+.icon-like:before {
+  content: "\e61f";
+}
+
+.icon-dislike:before {
+  content: "\e61e";
+}
+
+.icon-like-b:before {
+  content: "\e621";
+}
+.icon-bianji1:before {
+  content: "\e620";
+}
+
+
+
+>>>>>>> hyx3

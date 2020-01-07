@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 page{
   height: 100%;
 }
@@ -20,3 +21,6 @@ map{
 
 
 
+=======
+/* pages/release/release.wxss */
+>>>>>>> hyx3

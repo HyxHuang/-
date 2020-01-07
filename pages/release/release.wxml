@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view class="wrap">
 	<attendence 
   height="348rpx"
@@ -22,3 +23,7 @@
     ></map>
   </view>
 </view>
+=======
+<!--pages/release/release.wxml-->
+<text>pages/release/release.wxml</text>
+>>>>>>> hyx3
