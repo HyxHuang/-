@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1578318080112, function(require, module, exports) {
+__DEFINE__(1578394964664, function(require, module, exports) {
 var engine = require('../src/store-engine')
 
 var storages = require('../storages/all')
@@ -12,8 +12,8 @@ var plugins = [require('../plugins/json2')]
 
 module.exports = engine.createStore(storages, plugins)
 
-}, function(modId) {var map = {"../src/store-engine":1578318080113,"../storages/all":1578318080115,"../plugins/json2":1578318080122}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1578318080113, function(require, module, exports) {
+}, function(modId) {var map = {"../src/store-engine":1578394964665,"../storages/all":1578394964667,"../plugins/json2":1578394964674}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1578394964665, function(require, module, exports) {
 var util = require('./util')
 var slice = util.slice
 var pluck = util.pluck
@@ -252,8 +252,8 @@ function createStore(storages, plugins, namespace) {
 	return store
 }
 
-}, function(modId) { var map = {"./util":1578318080114}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1578318080114, function(require, module, exports) {
+}, function(modId) { var map = {"./util":1578394964666}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1578394964666, function(require, module, exports) {
 var assign = make_assign()
 var create = make_create()
 var trim = make_trim()
@@ -374,7 +374,7 @@ function isObject(val) {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1578318080115, function(require, module, exports) {
+__DEFINE__(1578394964667, function(require, module, exports) {
 module.exports = [
 	// Listed in order of usage preference
 	require('./localStorage'),
@@ -385,8 +385,8 @@ module.exports = [
 	require('./memoryStorage')
 ]
 
-}, function(modId) { var map = {"./localStorage":1578318080116,"./oldFF-globalStorage":1578318080117,"./oldIE-userDataStorage":1578318080118,"./cookieStorage":1578318080119,"./sessionStorage":1578318080120,"./memoryStorage":1578318080121}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1578318080116, function(require, module, exports) {
+}, function(modId) { var map = {"./localStorage":1578394964668,"./oldFF-globalStorage":1578394964669,"./oldIE-userDataStorage":1578394964670,"./cookieStorage":1578394964671,"./sessionStorage":1578394964672,"./memoryStorage":1578394964673}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1578394964668, function(require, module, exports) {
 var util = require('../src/util')
 var Global = util.Global
 
@@ -426,8 +426,8 @@ function clearAll() {
 	return localStorage().clear()
 }
 
-}, function(modId) { var map = {"../src/util":1578318080114}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1578318080117, function(require, module, exports) {
+}, function(modId) { var map = {"../src/util":1578394964666}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1578394964669, function(require, module, exports) {
 // oldFF-globalStorage provides storage for Firefox
 // versions 6 and 7, where no localStorage, etc
 // is available.
@@ -471,8 +471,8 @@ function clearAll() {
 	})
 }
 
-}, function(modId) { var map = {"../src/util":1578318080114}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1578318080118, function(require, module, exports) {
+}, function(modId) { var map = {"../src/util":1578394964666}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1578394964670, function(require, module, exports) {
 // oldIE-userDataStorage provides storage for Internet Explorer
 // versions 6 and 7, where no localStorage, sessionStorage, etc
 // is available.
@@ -601,8 +601,8 @@ function _makeIEStorageElFunction() {
 	}
 }
 
-}, function(modId) { var map = {"../src/util":1578318080114}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1578318080119, function(require, module, exports) {
+}, function(modId) { var map = {"../src/util":1578394964666}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1578394964671, function(require, module, exports) {
 // cookieStorage is useful Safari private browser mode, where localStorage
 // doesn't work but cookies do. This implementation is adopted from
 // https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage
@@ -665,8 +665,8 @@ function _has(key) {
 	return (new RegExp("(?:^|;\\s*)" + escape(key).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(doc.cookie)
 }
 
-}, function(modId) { var map = {"../src/util":1578318080114}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1578318080120, function(require, module, exports) {
+}, function(modId) { var map = {"../src/util":1578394964666}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1578394964672, function(require, module, exports) {
 var util = require('../src/util')
 var Global = util.Global
 
@@ -706,8 +706,8 @@ function clearAll() {
 	return sessionStorage().clear()
 }
 
-}, function(modId) { var map = {"../src/util":1578318080114}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1578318080121, function(require, module, exports) {
+}, function(modId) { var map = {"../src/util":1578394964666}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1578394964673, function(require, module, exports) {
 // memoryStorage is a useful last fallback to ensure that the store
 // is functions (meaning store.get(), store.set(), etc will all function).
 // However, stored values will not persist when the browser navigates to
@@ -749,7 +749,7 @@ function clearAll(key) {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1578318080122, function(require, module, exports) {
+__DEFINE__(1578394964674, function(require, module, exports) {
 module.exports = json2Plugin
 
 function json2Plugin() {
@@ -757,8 +757,8 @@ function json2Plugin() {
 	return {}
 }
 
-}, function(modId) { var map = {"./lib/json2":1578318080123}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1578318080123, function(require, module, exports) {
+}, function(modId) { var map = {"./lib/json2":1578394964675}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1578394964675, function(require, module, exports) {
 /* eslint-disable */
 
 //  json2.js
@@ -1268,6 +1268,6 @@ if (typeof JSON !== "object") {
     }
 }());
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1578318080112);
+return __REQUIRE__(1578394964664);
 })()
 //# sourceMappingURL=index.js.map

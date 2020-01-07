@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 .project-wrap{
   padding: 30rpx;
   color: #3f3f3f;
 }
-=======
-/* pages/project/project.wxss */
->>>>>>> hyx3

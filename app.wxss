@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-@import 'assets/fonts.wxss';
-@import '/assets/fonts/iconfont.wxss';
-@import '/assets/fonts/icon.wxss';
-=======
-/**app.wxss**/
-
-@import '/assets/fonts/iconfont.wxss';
-
->>>>>>> hyx3
+@import '/assets/fonts/fonts.wxss';
 .container {
   height: 100%;
   display: flex;

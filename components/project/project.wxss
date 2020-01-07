@@ -1,4 +1,3 @@
-@import '/assets/fonts.wxss';
 page{
   background-color: #eaf1ff;
 }

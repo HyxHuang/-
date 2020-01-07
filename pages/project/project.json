@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "usingComponents": {
     "project":"../../components/project/project"
   }
-=======
-  "usingComponents": {}
->>>>>>> hyx3
 }

@@ -1,13 +1,10 @@
 <!--pages/notice/notice.wxml-->
-<<<<<<< HEAD
-<text>pages/notice/notice.wxml</text>
-=======
 <view class="addNoticeWrap">
   <text class="header">上传新通知</text>
   <view class="addNotice">
     <input placeholder="标题" ></input>
-    <textarea placeholder="简述文字"></textarea>
-    <button>马上上传</button>
+    <textarea placeholder="描述文字"></textarea>
+    <button>上传</button>
   </view>
 </view>
 <view wx:for="{{notices}}" wx:for-index="key"  wx:for-item="value" wx:key="key" >
@@ -19,12 +16,15 @@
         <view class="itemWrap" wx:for="{{value}}" wx:key="key">
           <view class="time">
             <view>
-              <mp-icon icon="time" color="#c0c0c0"></mp-icon>
+              <!-- <mp-icon icon="time" color="#c0c0c0"></mp-icon> -->
+              <text class="iconfont icon-clock" color="#c0c0c0"></text>
+
               <text class="clock">{{item.time}}</text>
             </view>
             <view  class="action">
               <text class='iconfont icon-bianji bianji'></text>
-              <mp-icon icon="delete" color="#c0c0c0"></mp-icon>
+              <!-- <mp-icon icon="delete" color="#c0c0c0"></mp-icon> -->
+              <text class="iconfont icon-cc-delete" color="#c0c0c0"></text>
             </view>
             
           </view>
@@ -41,4 +41,3 @@
     </view>
   
 </view>
->>>>>>> hyx3

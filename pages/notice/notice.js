@@ -1,104 +1,32 @@
 // pages/notice/notice.js
-<<<<<<< HEAD
-=======
-import { formatDay } from '../..//utils/util.js'
->>>>>>> hyx3
+import { formatDay } from '../..//utils/util.js';
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-<<<<<<< HEAD
-
-=======
     notices: [],
     yesday: '',
     today: ''
->>>>>>> hyx3
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-<<<<<<< HEAD
-
-=======
+  onShow: function() {
     let that = this
     wx.request({
       url: 'http://10.9.49.228:9999/api/notice',
-      method:'get',
-      data:{
-        page:1,
-        limit:8
+      method: 'get',
+      data: {
+        page: 1,
+        limit: 8
       },
-      success(res){
+      success(res) {
         let yesday = formatDay(new Date(new Date().getTime() - 86400000))
         let today = formatDay(new Date())
         that.setData({
-          notices:res.data.data,
+          notices: res.data.data,
           yesday,
           today
         })
       },
-      fail(error){
+      fail(error) {
         console.log(error)
       }
     })
->>>>>>> hyx3
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> hyx3
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
 })

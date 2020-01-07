@@ -1,1 +1,41 @@
-/* pages/profile/profile.wxss */
+.profileWrap {
+  background: #eaf1ff;
+  width: 100%;
+  position: absolute;
+}
+
+.avatarWrap {
+  background: #295ef7;
+  height: 650rpx;
+  width: 100%;
+  position: relative;
+}
+
+.avatar {
+  width: 300rpx;
+  height: 300rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.infoWrap {
+  background: #fff;
+  padding: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.info {
+  display: block;
+  font-size: 28rpx;
+  color: #606060;
+}
+
+label {
+  font-size: 24rpx;
+  color: #b8b8b8;
+  margin-top: 20rpx;
+}
