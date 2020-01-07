@@ -1,7 +1,6 @@
 
 <!--pages/project/project.wxml-->
 
-
 <view class="project-wrap">
   <project></project>
 </view>

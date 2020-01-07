@@ -1,2 +1,22 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view class="profileWrap">
+  <view class="avatarWrap">
+    <image class="avatar" src="../../assets/images/avatar.png"></image>
+  </view>
+  <view class="infoWrap">
+    <label>姓名</label>
+    <text class="info">Adam De Sliva</text>
+  </view>
+  <view class="infoWrap">
+    <label>任职</label>
+    <text class="info">系统管理员</text>
+  </view>
+  <view class="infoWrap">
+    <label>邮箱</label>
+    <text class="info">Adamsiliva24@gmail.com</text>
+  </view>
+  <view class="infoWrap">
+    <label>地址</label>
+    <text class="info">帝国大厦250号</text>
+  </view>
+</view>
