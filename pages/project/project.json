@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+
+  "usingComponents": {
+    "project":"../../components/project/project"
+  }
+
 }

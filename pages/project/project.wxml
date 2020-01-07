@@ -1,2 +1,8 @@
+
 <!--pages/project/project.wxml-->
-<text>pages/project/project.wxml</text>
+
+
+<view class="project-wrap">
+  <project></project>
+</view>
+

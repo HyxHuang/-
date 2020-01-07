@@ -6,6 +6,34 @@ Page({
    */
   data: {
 
+    boardList:[
+      {
+        id:1,
+        txt:'所有项目',
+        number:12
+      },
+      {
+        id:2,
+        txt:'进行中的项目',
+        number:12
+      },
+      {
+        id:3,
+        txt:'所有员工',
+        number:12
+      },
+      {
+        id:4,
+        txt:'所有通告',
+        number:12
+      },
+      {
+        id:5,
+        txt:'总计休假天数',
+        number:12
+      },
+    ]
+
   },
 
   /**

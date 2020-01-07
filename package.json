@@ -1,5 +1,9 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "weui-miniprogram": "^0.2.1"
+=======
+    "store": "^2.0.12"
+>>>>>>> master
   }
 }

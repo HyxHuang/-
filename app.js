@@ -1,3 +1,4 @@
+
 //app.js
 
 App({
@@ -37,4 +38,5 @@ App({
   globalData: {
     userInfo: null
   }
+
 })
