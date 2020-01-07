@@ -1,2 +1,17 @@
 <!--pages/board/board.wxml-->
-<text>pages/board/board.wxml</text>
+<view id="board">
+	<view class="view-plate">
+		<scroll-view class="scroll-plate" scroll-x='true' enable-flex>
+			<view class="sc-view" wx:for="{{boardList}}" wx:key="id">
+				<view class="sc-view-content">
+					<view>
+						<image src="/assets/images/board-icon-1.png"></image>
+					</view>
+					<view>{{item.txt}}</view>
+					<view>{{item.number}}</view>
+				</view>
+			</view>
+			
+		</scroll-view>
+	</view>
+</view>
