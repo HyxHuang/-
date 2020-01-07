@@ -1,0 +1,35 @@
+<view class="subproject-wrap">
+	<view>上传新项目</view>
+	<view class="form-wrap">
+		<view class="title">
+			<label>项目标题</label>
+			<input disabled="{{disabled}}"></input>
+		</view>
+		<view class="describ">
+			<label>文字描述</label>
+			<textarea disabled="{{disabled}}"></textarea>
+		</view>
+		<view class="member">
+			<label>指定成员</label>
+			<view class="all-member">
+				<text bindtap="chooseMember">所有成员</text>
+				<view class="img-group">
+					<image src="/assets/images/img_03.png" style="left:0"></image>
+					<image src="/assets/images/img_03.png" style="left:50rpx"></image>
+				</view>
+			</view>
+		</view>
+		<view class="end-time">
+			<text>项目时间截点</text>
+			<view class="choose-time">
+				<text>任何时间</text>
+				<picker mode="date" value="{{date}}" start="2010-01-01" end="2050-01-01" bindchange="bindDateChange">
+					<text>{{date}}</text>
+				</picker>
+			</view>
+		</view>
+		<view class="btn" bindtap="submit">马上上传</view>
+	</view>
+</view>
+
+<dialog wx:if="{{disabled}}" bindMyevent="onMyevent"></dialog>
