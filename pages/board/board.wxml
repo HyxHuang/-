@@ -1,5 +1,4 @@
-<!--pages/board/board.wxml-->
-<view id="board">
+ <view id="board">
 	<view class="view-plate">
 		<scroll-view class="scroll-plate" scroll-x='true' enable-flex>
 			<view class="sc-view" wx:for="{{boardList}}" wx:key="id">
@@ -11,7 +10,50 @@
 					<view>{{item.number}}</view>
 				</view>
 			</view>
-			
 		</scroll-view>
+	</view>
+	<view class="view-block view-pro">
+		<view class="view-title">
+			<text>进行中的项目</text>
+			<text>查看全部</text>
+		</view>
+		<view class="pro-content">
+			<view class="pro-content-box" wx:for="{{proList}}" wx:key="id">
+				<view class="pro-title">
+					<text>{{item.title}}</text>
+				</view>
+				<view class="pro-des">
+					<text>{{item.des}}</text>
+				</view>
+				<view class="pro-time">
+					<text><text class="iconfont icon-clock"></text>{{item.start_time}}</text>
+					<text><text class="iconfont icon-clock"></text>{{item.end_time}}</text>
+				</view>
+			</view>
+
+
+		</view>
+	</view>
+	<view class="view-block view-yg">
+		<view class="view-title">
+			<text>缺勤员工</text>
+			<text>查看全部</text>
+		</view>
+		<view class="yg-content">
+			<scroll-view class="yg-plate" scroll-x='true' enable-flex>
+				<view class="yg-view" wx:for="{{boardList}}" wx:key="id">
+					<view class="yg-view-content">
+						<view class="yg-info">
+							<image src="/assets/images/avatar.png"></image>
+							<view>Hasnu Hansd</view>
+							<view>UI/UX 设计师</view>
+						</view>
+						<view class="yg-type">
+							病假
+						</view>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
 	</view>
 </view>

@@ -1,4 +1,7 @@
 Component({
+  options: {
+    styleIsolation: 'apply-shared'
+  },
   methods:{
     save(){
       this.triggerEvent('Myevent',{type:'save'})

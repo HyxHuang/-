@@ -1,5 +1,5 @@
+/* @import '/assets/fonts/fonts.wxss'; */
 .wrap{
-  
   background-color: #fff;
   border-radius: 10rpx;
 }
@@ -52,7 +52,7 @@
   text-align: center;
 }
 
-.date-item>view:first-child {
+.date-item >view:first-child {
   background-color: #4984ff;
   color: #fff;
 }

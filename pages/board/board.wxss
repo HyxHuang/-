@@ -1,13 +1,25 @@
 page {
-  height: 100%;
+  background: #eaf1ff;
+  background-size: cover;
 }
 
-#board {}
+/* 解决安卓手机上滚动条显示 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+}
+
+#board {
+  overflow-y: auto;
+}
 
 .view-plate {
   height: 207rpx;
   padding: 42rpx 32rpx 0;
 }
+
 .scroll-plate {
   white-space: nowrap;
   display: flex;
@@ -39,16 +51,150 @@ page {
 .scroll-plate view:nth-child(5) view {
   background: #ff8c3c;
 }
-.sc-view-content{
+
+.sc-view-content {
   padding-top: 20rpx;
 }
-.sc-view-content view{
+
+.sc-view-content view {
   text-align: center;
   color: #fff;
-  font-size: 28rpx;
+  font-size: 24rpx;
   line-height: 42rpx;
 }
-.sc-view-content image{
+
+.sc-view-content image {
   width: 28rpx;
   height: 28rpx;
+}
+
+/* --------------------------------- */
+.view-block {
+  width: 100%;
+  box-sizing: border-box;
+  height: 490rpx;
+  padding: 0 31rpx;
+}
+
+.view-block .view-title {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.view-block .view-title text {
+  flex: 1;
+  color: #464646;
+  font-weight: 600;
+}
+
+.view-block .view-title text:nth-child(1) {
+  font-size: 28rpx;
+}
+
+.view-block .view-title text:nth-child(2) {
+  font-size: 24rpx;
+  text-align: right;
+}
+
+/* ------------------------------------- */
+
+.view-pro .pro-content {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 26rpx;
+}
+
+.view-pro .pro-content>view {
+  width: 324rpx;
+  height: 184rpx;
+  background: #fbfcff;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  padding: 16rpx 16rpx;
+  border-radius: 5rpx;
+}
+
+.view-pro .pro-content>view:nth-child(odd) {
+  margin-right: 40rpx;
+}
+
+.pro-content-box>view {
+  margin-bottom: 10rpx;
+}
+
+.pro-content text {
+  font-size: 24rpx;
+}
+
+.pro-title text {
+  font-size: 28rpx;
+}
+
+.pro-des text {
+  font-size: 24rpx;
+}
+
+.pro-time {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.pro-time text:nth-child(1) {
+  flex: 1;
+  font-size: 20rpx;
+  text-align: left;
+}
+
+.pro-time text:nth-child(2) {
+  flex: 1;
+  font-size: 20rpx;
+  text-align: right;
+}
+
+/* ------------------------- */
+.view-yg .yg-content {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 26rpx;
+}
+
+.yg-plate {
+  white-space: nowrap;
+  display: flex;
+  height: 276rpx;
+}
+
+.yg-view>.yg-view-content {
+  width: 230rpx;
+  height: 276rpx;
+  margin-right: 20rpx;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.yg-info {
+  height: 223px;
+  width: 100%;
+  background: #fff;
+  text-align: center;
+
+}
+
+.yg-info image {
+  width: 122rpx;
+  height: 122rpx;
+  margin-top: 18rpx;
+}
+
+.yg-info>view {
+  font-size: 20rpx;
+}
+
+.yg-type {
+  height: 55rpx;
+  background: #2c70ff;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 55rpx;
 }

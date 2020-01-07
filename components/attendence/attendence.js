@@ -1,6 +1,7 @@
 Component({
   options: {
-    pureDataPattern: /^_/ 
+    pureDataPattern: /^_/ ,
+    styleIsolation: 'apply-shared'
   },
   data:{
     _lat:40.11717  ,
@@ -74,7 +75,7 @@ Component({
     },
     getData(){
       wx.request({
-        url: 'http://10.9.49.228:9999/api/sign',
+        url: 'https://xiaosongweb.cn/api/sign',
         data:{
           userId:'000016',
           year:this.data.year,
@@ -82,6 +83,8 @@ Component({
         },
         method:'post',
         success:(res)=>{
+          console.log(res);
+          
           let {id,name,position,signList}=res.data.data
           this.setData({
             id,
@@ -89,6 +92,7 @@ Component({
             position,
             signList
           })
+
         }
       })
     }
