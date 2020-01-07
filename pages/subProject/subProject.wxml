@@ -3,11 +3,11 @@
 	<view class="form-wrap">
 		<view class="title">
 			<label>项目标题</label>
-			<input></input>
+			<input disabled="{{disabled}}"></input>
 		</view>
 		<view class="describ">
 			<label>文字描述</label>
-			<textarea></textarea>
+			<textarea disabled="{{disabled}}"></textarea>
 		</view>
 		<view class="member">
 			<label>指定成员</label>
@@ -23,36 +23,13 @@
 			<text>项目时间截点</text>
 			<view class="choose-time">
 				<text>任何时间</text>
-				<text>2020-01-06</text>
+				<picker mode="date" value="{{date}}" start="2010-01-01" end="2050-01-01" bindchange="bindDateChange">
+					<text>{{date}}</text>
+				</picker>
 			</view>
 		</view>
-		<view class="btn">马上上传</view>
+		<view class="btn" bindtap="submit">马上上传</view>
 	</view>
 </view>
 
-<view class="dialog-wrap">
-	<view class="dialog">
-		<view>所有成员</view>
-		<checkbox-group>
-			<checkbox value="1">
-				<view class="item">
-					<image src="/assets/images/img_03.png"></image>
-					<text>1</text>
-				</view>
-			</checkbox>
-			<checkbox value="2">
-				<view class="item">
-					<image src="/assets/images/img_03.png"></image>
-					<text>2</text>
-				</view>
-			</checkbox>
-			<checkbox value="3">
-				<view class="item">
-					<image src="/assets/images/img_03.png"></image>
-					<text>3</text>
-				</view>
-			</checkbox>
-      <view class="save">马上保存</view>
-		</checkbox-group>
-	</view>
-</view>
+<dialog wx:if="{{disabled}}" bindMyevent="onMyevent"></dialog>

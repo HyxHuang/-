@@ -1,0 +1,43 @@
+<view class="dialog-wrap">
+	<view class="dialog">
+		<view>所有成员</view>
+		<scroll-view scroll-y class="scroll">
+			<checkbox-group bindchange="getUserList">
+				<checkbox value="1">
+					<view class="item">
+						<image src="/assets/images/img_03.png"></image>
+						<text>1</text>
+					</view>
+				</checkbox>
+				<checkbox value="2">
+					<view class="item">
+						<image src="/assets/images/img_03.png"></image>
+						<text>2</text>
+					</view>
+				</checkbox>
+				<checkbox value="3">
+					<view class="item">
+						<image src="/assets/images/img_03.png"></image>
+						<text>3</text>
+					</view>
+				</checkbox>
+				<checkbox value="3">
+					<view class="item">
+						<image src="/assets/images/img_03.png"></image>
+						<text>3</text>
+					</view>
+				</checkbox>
+				<checkbox value="3">
+					<view class="item">
+						<image src="/assets/images/img_03.png"></image>
+						<text>3</text>
+					</view>
+				</checkbox>
+			</checkbox-group>
+		</scroll-view>
+		<view class="save">
+      <text bindtap="cancle">取消</text>
+      <text bindtap="save">马上保存</text>
+    </view>
+	</view>
+</view>
