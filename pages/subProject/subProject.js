@@ -1,7 +1,11 @@
 Page({
   data:{
     disabled:false,
-    date:new Date().getFullYear()+'-'+(new Date().getMonth()+1)+'-'+new Date().getDate()
+    date:new Date().getFullYear()+'-'+(new Date().getMonth()+1)+'-'+new Date().getDate(),
+    userList:[],
+    title:"",
+    des:"",
+    projectMessage:{}
   },
   chooseMember(){
     this.setData({
@@ -14,14 +18,34 @@ Page({
       date:e.detail.value
     })
   },
+  handleBlur(e){
+    if(e.currentTarget.dataset.type==='input'){
+      this.setData({
+        title:e.detail.value
+      })
+    }else{
+      this.setData({
+        des:e.detail.value
+      })
+    }
+  },
   submit(){
     console.log(1)
+    this.setData({
+      projectMessage:{
+        title:this.data.title,
+        des:this.data.des,
+        userList:this.data.userList,
+        date:this.data.date
+      }
+    },()=>{
+      console.log(this.data.projectMessage)
+    })
   },
   onMyevent(e){
-
     this.setData({
-      disabled:false
+      disabled:false,
+      userList:e.detail.chooseUserList
     })
-    console.log(e)
   }
 })
