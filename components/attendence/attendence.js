@@ -75,7 +75,7 @@ Component({
     },
     getData(){
       wx.request({
-        url: 'https://xiaosongweb.cn/api/sign',
+        url: 'http://10.9.49.228:9999/api/sign',
         data:{
           userId:'000016',
           year:this.data.year,

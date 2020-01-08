@@ -1,8 +1,6 @@
 page {
   background: #eaf1ff;
-  background-size: cover;
 }
-
 /* 解决安卓手机上滚动条显示 */
 ::-webkit-scrollbar {
   width: 0;

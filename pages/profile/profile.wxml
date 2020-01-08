@@ -1,22 +1,22 @@
 <view class="profileWrap">
   <view class="avatarWrap">
-    <image class="avatar" src="../../assets/images/avatar.png"></image>
+    <image class="avatar" src="{{user.avatar}}"></image>
   </view>
   <view class="infoWrap">
     <label>姓名</label>
-    <text class="info">Adam De Sliva</text>
+    <text class="info">{{user.name}}</text>
   </view>
   <view class="infoWrap">
     <label>任职</label>
-    <text class="info">系统管理员</text>
+    <text class="info">{{user.position}}</text>
   </view>
   <view class="infoWrap">
     <label>邮箱</label>
-    <text class="info">Adamsiliva24@gmail.com</text>
+    <text class="info">{{user.email}}</text>
   </view>
   <view class="infoWrap">
     <label>地址</label>
-    <text class="info">帝国大厦250号</text>
+    <text class="info">{{user.address}}</text>
   </view>
   
 </view>

@@ -1,14 +1,14 @@
 {
   "pages": [ 
-    "pages/board/board",
     "pages/login/login",
+    "pages/profile/profile",
+    "pages/board/board",
     "pages/register/register",
     "pages/notice/notice",
     "pages/project/project",
     "pages/release/release",
     "pages/subProject/subProject",
-    "pages/attendence/attendence",
-    "pages/profile/profile"
+    "pages/attendence/attendence"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,4 +1,5 @@
-// pages/board/board.js
+const store = require('store')
+let app = getApp()
 Page({
   data: {
     boardList: [{
@@ -55,5 +56,45 @@ Page({
         end_time: '2018-10-1'
       }
     ]
+  },
+  diao() {
+    wx.login({
+      complete: (res) => {
+        this.zwyz(res.code)
+      },
+    })
+  },
+
+  zwyz(code) {
+    console.log(store.get('tk'));
+    wx.startSoterAuthentication({
+      requestAuthModes: ['fingerPrint'],
+      challenge: '123456',
+      authContent: '请用指纹解锁',
+      success(res) {
+        let {
+          resultJSON,
+          resultJSONSignature
+        } = res
+        console.log(code);
+        wx.request({
+          url: 'http://10.9.49.228:9999/api/zwyz',
+          data: {
+            code: code,
+            resultJSON,
+            resultJSONSignature
+          },
+          success(res) {
+            if (res.data.code === 2000) {
+              wx.showToast({
+                title: '恭喜打卡成功111',
+                icon: 'none',
+                duration: 2000
+              })
+            }
+          }
+        })
+      }
+    })
   }
 })
