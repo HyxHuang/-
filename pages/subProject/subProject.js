@@ -1,11 +1,13 @@
+const moment=require('moment')
 Page({
   data:{
     disabled:false,
-    date:new Date().getFullYear()+'-'+(new Date().getMonth()+1)+'-'+new Date().getDate(),
+    date:moment().format('YYYY-MM-DD'),
     userList:[],
     title:"",
     des:"",
-    projectMessage:{}
+    projectMessage:{},
+    avatar:[]
   },
   chooseMember(){
     this.setData({
@@ -13,7 +15,6 @@ Page({
     })
   },
   bindDateChange(e){
-    console.log(e)
     this.setData({
       date:e.detail.value
     })
@@ -30,22 +31,41 @@ Page({
     }
   },
   submit(){
-    console.log(1)
     this.setData({
       projectMessage:{
         title:this.data.title,
         des:this.data.des,
-        userList:this.data.userList,
-        date:this.data.date
+        member:this.data.userList,
+        start_time:moment().format('YYYY-MM-DD'), 
+        end_time:this.data.date
       }
     },()=>{
-      console.log(this.data.projectMessage)
+      wx.request({
+        url: 'http://10.9.49.228:9999/api/addPj',
+        method:'post',
+        data:{
+          ...this.data.projectMessage
+        },
+        success(res){
+          console.log(res)
+          if(res.data.code===2000){
+            wx.navigateBack()
+          }
+        }
+      })
     })
   },
   onMyevent(e){
+    let userID=[]
+    if(e.detail.chooseUserList){
+      e.detail.chooseUserList.forEach(value=>{
+        userID.push(value.id)
+      })
+    }
     this.setData({
       disabled:false,
-      userList:e.detail.chooseUserList
+      avatar:e.detail.chooseUserList,
+      userList:userID.toString()
     })
   }
 })

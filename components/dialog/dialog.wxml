@@ -2,13 +2,15 @@
 	<view class="dialog">
 		<view>所有成员</view>
 		<scroll-view scroll-y class="scroll">
-			<checkbox-group bindchange="getUserList">
-				<checkbox wx:for="{{userList}}" value="{{index}}" wx:key="index">
-					<view class="items">
-						<image src="{{item.avatar}}"></image>
-						<text>{{item.name}}</text>
-					</view>
-				</checkbox>
+			<checkbox-group bindchange="getUserList" >
+				<block wx:if="{{userList[0]}}" >
+					<checkbox  value="{{index}}" wx:for="{{userList}}" wx:key="index">
+							<view class="items">
+								<image src="{{item.avatar}}"></image>
+								<text>{{item.name}}</text>
+							</view>
+					</checkbox>
+				</block>
 			</checkbox-group>
 		</scroll-view>
 		<view class="save">

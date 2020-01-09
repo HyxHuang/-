@@ -1,9 +1,12 @@
 let app = getApp()
+const store=require('store')
+
 Component({
   options: {
     pureDataPattern: /^_/ ,
     styleIsolation: 'apply-shared'
   },
+  
   data: {
     _lat: 40.11717,
     _lon: 116.24533,
@@ -29,35 +32,32 @@ Component({
     lineheight: String,
     space: String,
     type: String,
-    itemHeight: String
+    itemHeight: String,
+    userMessage:Object
   },
   lifetimes: {
     attached() {
-      this.getData()
+      let {id,name,position,signData}=this.data.userMessage
+      if(this.data.type==='noSign'){
+        this.getData()
+      }else{
+        this.setData({
+          id,
+          name,
+          position,
+          signList:signData
+        })
+      }
     }
   },
   methods: {
     handleSignin(e) {
-      if (e.target.dataset.type === 'noSign' && e.target.dataset.day === this.data.day + 1) {
+      if (e.target.dataset.type === 'noSign' && e.target.dataset.day === this.data.day ) {
         this.checkIsFingerPrint()
         setTimeout(()=>{
           if (this.data.isfingerPrint && this.data.haveFingerPrint) {
             this.fingerPrint()
           }
-          // else if(!this.data.isfingerPrint){
-          //   wx.getLocation({
-          //     success:(res)=>{
-          //       if(this.data.type==='attendence'){
-          //         let distance=this.distance(res.latitude,res.longitude,this.data._lat,this.data._lon)
-          //         if(distance<0.4){
-          //           wx.showToast({
-          //             title: '签到成功',
-          //           })
-          //         }
-          //       }
-          //     }
-          //   })
-          // }
         })
       }
     },
@@ -101,12 +101,13 @@ Component({
       wx.request({
         url: 'http://10.9.49.228:9999/api/sign',
         data: {
-          userId: '000016',
+          userId:this.data.type==='noSign'?app.globalData.uData.id:this.data.id,
           year: this.data.year,
           month: this.data.month
         },
         method: 'post',
         success: (res) => {
+          console.log(res)
           let { id, name, position, signList } = res.data.data
           this.setData({
             id,
@@ -169,6 +170,7 @@ Component({
     },
     //指纹识别
     fingerPrint() {
+      let that=this
       wx.startSoterAuthentication({
         requestAuthModes: ['fingerPrint'],
         challenge: '123456',
@@ -185,8 +187,26 @@ Component({
             },
             success(res) {
               if (res.data) {
-                wx.showToast({
-                  title: '签到成功',
+                let {id,year,month,day}=that.data
+                wx.request({
+                  url: 'http://10.9.49.228:9999/api/signToday',
+                  method:'post',
+                  data:{
+                    userId:id,
+                    year,
+                    month,
+                    day
+                  },success(res){
+                    if(res.data.code===2000){
+                      console.log(res)
+                      that.setData({
+                        signList:res.data.signList
+                      })
+                      wx.showToast({
+                        title: '签到成功',
+                      })
+                    }
+                  }
                 })
               } else {
                 wx.showToast({

@@ -1,3 +1,6 @@
 <view class="project-wrap">
-  <project></project>
+  <button class="addProject" bindtap="addProject">添加新项目</button>
+  <block wx:for="{{projectList}}" wx:key="index">
+    <project  projectMessage="{{item}}"></project>
+  </block>
 </view>

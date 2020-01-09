@@ -7,12 +7,15 @@ page{
 }
 .img{
   margin-right: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .img image{
-  width: 200rpx;
-  height: 220rpx;
+  width: 150rpx;
+  height: 150rpx;
 }
 attendence{
-  width: 466rpx;
+  width: 500rpx;
   
 }

@@ -2,3 +2,8 @@
   padding: 30rpx;
   color: #3f3f3f;
 }
+.addProject{
+  margin-bottom: 30rpx;
+  background-color:#224BF0 ;
+  color: #fff;
+}

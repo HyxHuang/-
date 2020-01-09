@@ -1,7 +1,7 @@
 <view>
 
 </view>
-<view class="wrap" wx:for="{{dataList}}">
+<view class="wrap" wx:for="{{userList}}">
   <block>
     <view class="img">
     <image src="/assets/images/img_03.png"></image>
@@ -17,6 +17,7 @@
     lineheight="50rpx"
     space="10rpx 0"
     itemHeight="100rpx"
+    userMessage="{{item}}"
   ></attendence>
   
   </block>

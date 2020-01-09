@@ -1,13 +1,23 @@
+const moment=require('moment')
 Component({
   properties: {
-
+    projectMessage:{
+      type:Object
+    }
   },
   data: {
-    percent: 0.9
+    percent: 0.9,
+    userMessage:{}
+  },
+  observers:{
+    'projectMessage':function(value){
+      this.getAvatar(value)
+    }
   },
   lifetimes: {
     attached() {
-      this.drawCircle()
+      // console.log(this.data.projectMessage)
+      
     }
   },
 
@@ -27,6 +37,41 @@ Component({
       ctx2.setLineWidth(5)
       ctx2.stroke()
       ctx2.draw()
+    },
+    getAvatar(user){
+      let that=this
+      wx.request({
+        url: 'http://10.9.49.228:9999/api/userMore',
+        method:'post',
+        data:{
+          u:user.member
+        },
+        success(res){
+          that.setData({
+            userMessage:{...that.data.projectMessage,...res.data}
+          },()=>{
+            let {start_time,end_time}=that.data.userMessage
+            let now=moment(moment().format('YYYY-MM-DD'))
+            let m1=moment(start_time)
+            let m2=moment(end_time)
+            let fromNow=now.diff(m1,'day')
+            let fromEnd=m2.diff(m1, 'day')
+            if(fromEnd===0){
+              that.setData({
+                percent:1
+              },()=>{
+                that.drawCircle()
+              })
+            }else{
+              that.setData({
+                percent:(fromNow/fromEnd).toFixed(2)>=1?1:(fromNow/fromEnd).toFixed(2)
+              },()=>{
+                that.drawCircle()
+              })
+            }
+          })
+        }
+      })
     }
   }
 })
