@@ -5,6 +5,7 @@ page{
 }
 .subproject-wrap{
   padding: 30rpx;
+  
 }
 .subproject-wrap >view:first-child{
   color: #464646;

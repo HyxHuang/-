@@ -1,4 +1,3 @@
-/* @import '/assets/fonts/fonts.wxss'; */
 .wrap{
   background-color: #fff;
   border-radius: 10rpx;

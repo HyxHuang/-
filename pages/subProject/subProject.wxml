@@ -3,19 +3,18 @@
 	<view class="form-wrap">
 		<view class="title">
 			<label>项目标题</label>
-			<input disabled="{{disabled}}"></input>
+			<input disabled="{{disabled}}" bindblur="handleBlur" data-type='input'></input>
 		</view>
 		<view class="describ">
 			<label>文字描述</label>
-			<textarea disabled="{{disabled}}"></textarea>
+			<textarea disabled="{{disabled}}" bindblur="handleBlur" data-type='textarea'></textarea>
 		</view>
 		<view class="member">
 			<label>指定成员</label>
 			<view class="all-member">
 				<text bindtap="chooseMember">所有成员</text>
 				<view class="img-group">
-					<image src="/assets/images/img_03.png" style="left:0"></image>
-					<image src="/assets/images/img_03.png" style="left:50rpx"></image>
+					<image wx:for="{{userList}}" src="{{item.avatar}}" wx:key="index" style="left:{{index*50}}rpx"></image>
 				</view>
 			</view>
 		</view>

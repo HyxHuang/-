@@ -1,9 +1,25 @@
 const store = require('store')
 App({
-  onLaunch: function () {
-
+  globalData:{
+    openid:'',
+    access_token:''
   },
-  globalData: {
-    userInfo: null
-  }
+  onLaunch(){
+    let code=''
+    let that=this
+    wx.login({
+      success:(res)=>{
+        code=res.code
+        wx.request({
+          url: 'http://10.9.49.215:3333/getOpenId',
+          data:{
+            code 
+          },
+          success(res){ 
+            that.globalData=res.data
+          }
+        })
+      } 
+    })
+  },
 })
