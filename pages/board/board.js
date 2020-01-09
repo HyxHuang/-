@@ -59,7 +59,6 @@ Page({
         if (res.data.code !== 2000) {
           return false
         }
-        console.log(res.data.list);
         let {
           pj_num,
           ongPj_num,
