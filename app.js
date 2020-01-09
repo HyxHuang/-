@@ -7,7 +7,6 @@ App({
     let code=''
     let that=this
     wx.login({
-      
       success:(res)=>{
         code=res.code
         wx.request({
