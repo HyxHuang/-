@@ -14,7 +14,7 @@
 			<view class="all-member">
 				<text bindtap="chooseMember">所有成员</text>
 				<view class="img-group">
-					<image wx:for="{{userList}}" src="{{item.avatar}}" wx:key="index" style="left:{{index*50}}rpx"></image>
+					<image wx:for="{{avatar}}" src="{{item.avatar}}" wx:key="index" style="left:{{index*50}}rpx"></image>
 				</view>
 			</view>
 		</view>

@@ -1,9 +1,8 @@
 Page({
   data:{
-    dataList:{}
+    userList:[]
   },
   onLoad(){
-    console.log(1)
     this.getData()
     
   },
@@ -18,7 +17,7 @@ Page({
       success:(res)=>{
         console.log(res)
         this.setData({
-          dataList:res.data.data
+          userList:res.data.data
         })
       }
     })

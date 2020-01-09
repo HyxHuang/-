@@ -1,10 +1,10 @@
 const store = require('store')
-
+let app=getApp()
 
 Page({
   data: {
-    username: '9033',
-    password: '123456'
+    username: '1',
+    password: 'a'
   },
   handleTzToLg() {
     wx.navigateTo({
@@ -36,6 +36,7 @@ Page({
         if (res.data.code === 2000) {
           let token = res.data.token
           store.set('tk', token)
+          app.globalData.uData=res.data.uData
           wx.reLaunch({
             url: '/pages/board/board',
           })

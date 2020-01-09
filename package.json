@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "moment": "^2.24.0",
     "store": "^2.0.12",
     "weui-miniprogram": "^0.2.1"
   }

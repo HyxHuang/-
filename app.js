@@ -2,7 +2,8 @@ const store = require('store')
 App({
   globalData:{
     openid:'',
-    access_token:''
+    access_token:'',
+    uData:''
   },
   onLaunch(){
     let code=''

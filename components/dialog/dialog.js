@@ -3,24 +3,20 @@ Component({
     styleIsolation: 'apply-shared'
   },
   data:{
-    userList:[
-      {
-        id:'1',
-        name:'hjj1',
-        avatar:'/assets/images/img_03.png'
-      },
-      {
-        id:'2',
-        name:'hjj2',
-        avatar:'/assets/images/img_03.png'
-      },
-      {
-        id:'3',
-        name:'hjj3',
-        avatar:'/assets/images/img_03.png'
-      }
-    ],
+    userList:new Array(10),
     chooseUserList:[]
+  },
+  lifetimes:{
+    attached(){
+      wx.request({
+        url: 'http://10.9.49.228:9999/api/user',
+        success:(res)=>{
+          this.setData({
+            userList:res.data.data
+          })
+        }
+      })
+    }
   },
   methods:{
     save(){
