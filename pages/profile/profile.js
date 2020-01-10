@@ -33,4 +33,22 @@ Page({
       }
     })
   },
+  handleSignout: function () {
+    wx.showModal({
+      title: '',
+      content: '是否退出登录',
+      cancelColor: '#DC143C',
+      confirmColor: '#1c66ff',
+      success(res) {
+        if (res.confirm) {
+          store.remove('tk')
+          wx.reLaunch({
+            url: '/pages/login/login',
+          })
+        } else if (res.cancel) {
+        }
+      }
+    })
+
+  }
 })

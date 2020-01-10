@@ -1,6 +1,7 @@
 page {
   background: #eaf1ff;
 }
+
 /* 解决安卓手机上滚动条显示 */
 ::-webkit-scrollbar {
   width: 0;
@@ -70,8 +71,8 @@ page {
 .view-block {
   width: 100%;
   box-sizing: border-box;
-  height: 490rpx;
   padding: 0 31rpx;
+
 }
 
 .view-block .view-title {
@@ -95,6 +96,9 @@ page {
 }
 
 /* ------------------------------------- */
+.view-pro {
+  height: 490rpx;
+}
 
 .view-pro .pro-content {
   display: flex;
@@ -126,10 +130,21 @@ page {
 
 .pro-title text {
   font-size: 28rpx;
+  width: 250rpx;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .pro-des text {
+  width: 100%;
+  /* background: red; */
+  display: inline-block;
   font-size: 24rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .pro-time {
@@ -150,6 +165,11 @@ page {
 }
 
 /* ------------------------- */
+
+.view-yg {
+  margin-bottom: 40rpx;
+}
+
 .view-yg .yg-content {
   display: flex;
   flex-flow: row wrap;
@@ -187,7 +207,12 @@ page {
 .yg-info>view {
   font-size: 20rpx;
 }
-
+.yg-position{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 20rpx;
+}
 .yg-type {
   height: 55rpx;
   background: #2c70ff;
@@ -195,4 +220,68 @@ page {
   color: #fff;
   text-align: center;
   line-height: 55rpx;
+}
+.yg-no{
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  width: 100%;
+  font-size: 28rpx;
+}
+/* ------------notice------------ */
+
+.view-notice {
+  margin-bottom: 40rpx;
+
+}
+
+.view-notice .view-title {
+  margin-bottom: 20rpx;
+}
+
+.notice-content {}
+
+.notice-content>view {
+  /* width: 100%; */
+  height: 237rpx;
+  /* background: gray; */
+  padding: 20rpx 20rpx 0rpx;
+  background: #fff;
+  border-bottom: 1px solid #ededed;
+
+}
+
+.notice-time {
+  font-size: 24rpx;
+  color: #787878;
+}
+.notice-time text{
+  font-size: 24rpx;
+}
+.notice-title {
+  color:#464646;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.notice-des {
+  color: #787878;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.notice-icon{
+  margin-top: 10rpx;
+}
+.notice-icon text{
+  font-size: 24rpx;
+  margin-right: 20rpx;
 }

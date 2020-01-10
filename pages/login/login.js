@@ -1,6 +1,5 @@
 const store = require('store')
-let app=getApp()
-
+const app = getApp()
 Page({
   data: {
     username: '1',
@@ -28,6 +27,8 @@ Page({
       username,
       password
     }
+    console.log(111);
+    
     wx.request({
       url: 'http://10.9.49.228:9999/api/lg',
       method: 'post',
@@ -36,7 +37,7 @@ Page({
         if (res.data.code === 2000) {
           let token = res.data.token
           store.set('tk', token)
-          app.globalData.uData=res.data.uData
+          app.globalData.uData = res.data.uData
           wx.reLaunch({
             url: '/pages/board/board',
           })
@@ -55,8 +56,6 @@ Page({
           duration: 2000
         })
       }
-
-      // 省略其他参数
     })
 
   },
