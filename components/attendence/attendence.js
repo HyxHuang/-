@@ -1,10 +1,9 @@
 let app = getApp()
 Component({
   options: {
-    pureDataPattern: /^_/ ,
+    pureDataPattern: /^_/,
     styleIsolation: 'apply-shared'
   },
-  
   data: {
     _lat: 40.11717,
     _lon: 116.24533,
@@ -31,29 +30,33 @@ Component({
     space: String,
     type: String,
     itemHeight: String,
-    userMessage:Object
+    userMessage: Object
   },
   lifetimes: {
-    attached() { 
-      if(this.data.type==='noSign'){
+    attached() {
+      if (this.data.type === 'noSign') {
         this.getData()
-      }else{
-        let {id,name,position,signData}=this.data.userMessage
+      } else {
+        let {
+          id,
+          name,
+          position,
+          signData
+        } = this.data.userMessage
         this.setData({
           id,
           name,
           position,
-          signList:signData
+          signList: signData
         })
       }
-      
     }
   },
   methods: {
     handleSignin(e) {
-      if (e.target.dataset.type === 'noSign' && e.target.dataset.day === this.data.day ) {
+      if (e.target.dataset.type === 'noSign' && e.target.dataset.day === this.data.day) {
         this.checkIsFingerPrint()
-        setTimeout(()=>{
+        setTimeout(() => {
           if (this.data.isfingerPrint && this.data.haveFingerPrint) {
             this.fingerPrint()
           }
@@ -66,7 +69,7 @@ Component({
       let La3 = La1 - La2;
       let Lb3 = lo1 * Math.PI / 180.0 - lo2 * Math.PI / 180.0;
       let s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(La3 / 2), 2) + Math.cos(La1) * Math.cos(La2) * Math.pow(Math.sin(Lb3 / 2), 2)));
-      s = s * 6378.137;//地球半径
+      s = s * 6378.137; //地球半径
       s = Math.round(s * 10000) / 10000;
       return s
     },
@@ -100,21 +103,25 @@ Component({
       wx.request({
         url: 'http://10.9.49.228:9999/api/sign',
         data: {
-          userId:this.data.type==='noSign'?app.globalData.uData.id:this.data.id,
+          userId: this.data.type === 'noSign' ? app.globalData.uData.id : this.data.id,
           year: this.data.year,
           month: this.data.month
         },
         method: 'post',
         success: (res) => {
           console.log(res)
-          let { id, name, position, signList } = res.data.data
+          let {
+            id,
+            name,
+            position,
+            signList
+          } = res.data.data
           this.setData({
             id,
             name,
             position,
             signList
           })
-
         }
       })
     },
@@ -131,7 +138,7 @@ Component({
                 isfingerPrint: true
               })
               that.haveFingerPrint()
-            }else{
+            } else {
               wx.showToast({
                 title: '您的手机不支持指纹识别',
               })
@@ -169,15 +176,18 @@ Component({
     },
     //指纹识别
     fingerPrint() {
-      let that=this
+      let that = this
       wx.startSoterAuthentication({
         requestAuthModes: ['fingerPrint'],
         challenge: '123456',
         authContent: '请用指纹解锁',
         success(res) {
-          let { resultJSON, resultJSONSignature } = res
+          let {
+            resultJSON,
+            resultJSONSignature
+          } = res
           wx.request({
-            url: 'http://10.9.49.215:3333/check',
+            url: 'http://10.9.49.228:9999/api/check',
             data: {
               openid: app.globalData.openid,
               access_token: app.globalData.access_token,
@@ -185,21 +195,27 @@ Component({
               resultJSONSignature
             },
             success(res) {
-              if (res.data) {
-                let {id,year,month,day}=that.data
+              if (res.data.code === 2000) {
+                let {
+                  id,
+                  year,
+                  month,
+                  day
+                } = that.data
                 wx.request({
                   url: 'http://10.9.49.228:9999/api/signToday',
-                  method:'post',
-                  data:{
-                    userId:id,
+                  method: 'post',
+                  data: {
+                    userId: id,
                     year,
                     month,
                     day
-                  },success(res){
-                    if(res.data.code===2000){
+                  },
+                  success(res) {
+                    if (res.data.code === 2000) {
                       console.log(res)
                       that.setData({
-                        signList:res.data.signList
+                        signList: res.data.signList
                       })
                       wx.showToast({
                         title: '签到成功',

@@ -27,6 +27,8 @@ Page({
       username,
       password
     }
+    console.log(111);
+    
     wx.request({
       url: 'http://10.9.49.228:9999/api/lg',
       method: 'post',
