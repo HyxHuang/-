@@ -39,3 +39,17 @@ label {
   color: #b8b8b8;
   margin-top: 20rpx;
 }
+.signOut{
+  /* background: red;
+  color: #FFF; */
+}
+button{
+  background:#1c66ff;
+  color: #fff;
+  border-radius: 0;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+.signout-success{
+  background:#95b4f3;
+}

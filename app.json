@@ -2,8 +2,8 @@
   "pages": [ 
     "pages/login/login",
     "pages/register/register",
-    "pages/board/board",
     "pages/profile/profile",
+    "pages/board/board",
     "pages/notice/notice",
     "pages/project/project",
     "pages/subProject/subProject",

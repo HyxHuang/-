@@ -10,7 +10,7 @@
   lineheight="75rpx"
   space="20rpx 0"
   itemHeight="150rpx"
-  type="attendence"
+  type="noSign"
   ></attendence>
 	<view class="map-wrap">
     <map

@@ -36,11 +36,14 @@ Component({
     userMessage:Object
   },
   lifetimes: {
-    attached() {
-      let {id,name,position,signData}=this.data.userMessage
+    attached() { 
+      
+
       if(this.data.type==='noSign'){
         this.getData()
       }else{
+        let {id,name,position,signData}=this.data.userMessage
+
         this.setData({
           id,
           name,
