@@ -7,11 +7,13 @@ Page({
     title:"",
     des:"",
     projectMessage:{},
-    avatar:[]
+    avatar:[],
+    isHidden:false
   },
   chooseMember(){
     this.setData({
-      disabled:true
+      disabled:true,
+      isHidden:true
     })
   },
   bindDateChange(e){
@@ -64,6 +66,7 @@ Page({
     }
     this.setData({
       disabled:false,
+      isHidden:false,
       avatar:e.detail.chooseUserList,
       userList:userID.toString()
     })

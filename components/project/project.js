@@ -14,12 +14,6 @@ Component({
       this.getAvatar(value)
     }
   },
-  lifetimes: {
-    attached() {
-      // console.log(this.data.projectMessage)
-      
-    }
-  },
 
   methods: {
     drawCircle() {

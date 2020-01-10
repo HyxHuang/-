@@ -5,10 +5,10 @@
     "pages/profile/profile",
     "pages/board/board",
     "pages/notice/notice",
-    "pages/project/project",
     "pages/subProject/subProject",
-    "pages/attendence/attendence",
-    "pages/release/release"
+    "pages/release/release",
+    "pages/project/project",
+    "pages/attendence/attendence"
   ],
   "permission": {
     "scope.userLocation": {

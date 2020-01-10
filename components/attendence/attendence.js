@@ -1,6 +1,4 @@
 let app = getApp()
-const store=require('store')
-
 Component({
   options: {
     pureDataPattern: /^_/ ,
@@ -37,13 +35,10 @@ Component({
   },
   lifetimes: {
     attached() { 
-      
-
       if(this.data.type==='noSign'){
         this.getData()
       }else{
         let {id,name,position,signData}=this.data.userMessage
-
         this.setData({
           id,
           name,
@@ -51,6 +46,7 @@ Component({
           signList:signData
         })
       }
+      
     }
   },
   methods: {
