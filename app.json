@@ -1,7 +1,7 @@
 {
   "pages": [ 
-    "pages/subProject/subProject",
     "pages/login/login",
+    "pages/subProject/subProject",
     "pages/release/release",
     "pages/project/project",
     "pages/attendence/attendence",
