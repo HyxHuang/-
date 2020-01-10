@@ -1,13 +1,13 @@
 {
   "pages": [ 
-    "pages/project/project",
     "pages/subProject/subProject",
+    "pages/login/login",
+    "pages/release/release",
+    "pages/project/project",
     "pages/attendence/attendence",
     "pages/notice/notice",
     "pages/board/board",
     "pages/profile/profile",
-    "pages/release/release",
-    "pages/login/login",
     "pages/register/register"
   ],
   "permission": {
