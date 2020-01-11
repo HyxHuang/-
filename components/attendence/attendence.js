@@ -53,15 +53,32 @@ Component({
     }
   },
   methods: {
-    handleSignin(e) {
+    async handleSignin(e) {
       if (e.target.dataset.type === 'noSign' && e.target.dataset.day === this.data.day) {
         this.checkIsFingerPrint()
+        let {latitude,longitude}=await this.getLocation()
         setTimeout(() => {
-          if (this.data.isfingerPrint && this.data.haveFingerPrint) {
+          let {_lat,_lon}=this.data
+          let distance=this.distance(latitude,longitude,_lat,_lon)
+          if (this.data.isfingerPrint && this.data.haveFingerPrint&&distance<0.4) {
             this.fingerPrint()
           }
         })
+        
       }
+    },
+    getLocation(){
+      return new Promise((resolve,reject)=>{
+        let latitude='',longitude=''
+        wx.getLocation({
+          type:'wgs84',
+          success:(res)=>{
+            latitude = res.latitude
+            longitude = res.longitude
+            resolve({latitude,longitude})
+          }
+        })
+      })
     },
     distance(la1, lo1, la2, lo2) {
       let La1 = la1 * Math.PI / 180.0;
