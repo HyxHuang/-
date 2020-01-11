@@ -2,8 +2,10 @@ const store = require('store')
 const app = getApp()
 Page({
   data: {
-    username: '1',
-    password: 'a'
+    // username: '1',
+    // password: 'a',
+    username: '',
+    password: ''
   },
   handleTzToLg() {
     wx.navigateTo({
@@ -27,10 +29,8 @@ Page({
       username,
       password
     }
-    console.log(111);
-    
     wx.request({
-      url: 'http://10.9.49.228:9999/api/lg',
+      url: `${app.globalData.baseUrl}/api/lg`,
       method: 'post',
       data,
       success: function (res) {
@@ -66,5 +66,26 @@ Page({
       [type]: value
     })
   },
-  onLoad: function (options) {},
+  onLoad: function (options) {
+
+  },
+  onShareAppMessage(options) {
+    return {
+      title: '打卡叽',
+      path: '/pages/login/login',
+      imageUrl:'/assets/images/share_02.png',
+      success: function (shareTickets) {
+        console.info(shareTickets + '成功');
+        // 转发成功
+      },
+      fail: function (res) {
+        console.log(res + '失败');
+        // 转发失败
+      },
+      complete: function (res) {
+        // 不管成功失败都会执行
+      }
+
+    }
+  }
 })

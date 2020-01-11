@@ -15,7 +15,6 @@ Page({
     })
   },
   zwyz(code) {
-    console.log(store.get('tk'));
     wx.startSoterAuthentication({
       requestAuthModes: ['fingerPrint'],
       challenge: '123456',
@@ -25,9 +24,9 @@ Page({
           resultJSON,
           resultJSONSignature
         } = res
-        console.log(code);
+
         wx.request({
-          url: 'http://10.9.49.228:9999/api/zwyz',
+          url: `${app.globalData.baseUrl}/api/zwyz`,
           data: {
             code: code,
             resultJSON,
@@ -51,7 +50,7 @@ Page({
     let that = this
     let {id}=app.globalData.uData
     wx.request({
-      url: 'http://10.9.49.228:9999/api/infoC',
+      url: `${app.globalData.baseUrl}/api/infoC`,
       data:{
         userId:id
       },

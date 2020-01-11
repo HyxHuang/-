@@ -239,11 +239,9 @@ page {
   margin-bottom: 20rpx;
 }
 
-.notice-content {}
-
 .notice-content>view {
   /* width: 100%; */
-  height: 237rpx;
+  height: 257rpx;
   /* background: gray; */
   padding: 20rpx 20rpx 0rpx;
   background: #fff;

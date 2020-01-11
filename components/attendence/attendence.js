@@ -1,4 +1,4 @@
-let app = getApp()
+const app = getApp()
 Component({
   options: {
     pureDataPattern: /^_/,
@@ -101,7 +101,7 @@ Component({
     },
     getData() {
       wx.request({
-        url: 'http://10.9.49.228:9999/api/sign',
+        url: `${app.globalData.baseUrl}/api/sign`,
         data: {
           userId: this.data.type === 'noSign' ? app.globalData.uData.id : this.data.id,
           year: this.data.year,
@@ -109,7 +109,6 @@ Component({
         },
         method: 'post',
         success: (res) => {
-          console.log(res)
           let {
             id,
             name,
@@ -130,10 +129,8 @@ Component({
       let that = this
       wx.checkIsSupportSoterAuthentication({
         success(res) {
-          console.log(res)
           for (var i in res.supportMode) {
             if (res.supportMode[i] == 'fingerPrint') {
-              console.log("支持指纹识别", res.supportMode[i]);
               that.setData({
                 isfingerPrint: true
               })
@@ -157,7 +154,6 @@ Component({
             that.setData({
               haveFingerPrint: true
             })
-            console.log('ok')
           } else if (res.isEnrolled == 0) {
             wx.showToast({
               title: '请您录入指纹',
@@ -187,7 +183,7 @@ Component({
             resultJSONSignature
           } = res
           wx.request({
-            url: 'http://10.9.49.228:9999/api/check',
+            url: `${app.globalData.baseUrl}/api/check`,
             data: {
               openid: app.globalData.openid,
               access_token: app.globalData.access_token,
@@ -203,7 +199,7 @@ Component({
                   day
                 } = that.data
                 wx.request({
-                  url: 'http://10.9.49.228:9999/api/signToday',
+                  url: `${app.globalData.baseUrl}/api/signToday`,
                   method: 'post',
                   data: {
                     userId: id,
@@ -213,10 +209,9 @@ Component({
                   },
                   success(res) {
                     if (res.data.code === 2000) {
-                      console.log(res)
                       that.setData({
                         signList: res.data.signList
-                      })
+                        })
                       wx.showToast({
                         title: '签到成功',
                       })

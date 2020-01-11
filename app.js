@@ -3,22 +3,23 @@ App({
   globalData: {
     openid: '',
     access_token: '',
-    uData: ''
+    uData: '',
+    baseUrl:'https://xiaosongweb.cn'
   },
   onLaunch() {
     let code = ''
-    let that = this
     wx.login({
       success: (res) => {
         code = res.code
         wx.request({
-          url: 'http://10.9.49.228:9999/api/getOpenId',
+          url: `${this.globalData.baseUrl}/api/getOpenId`,
           data: {
             code
           },
-          success(res) {
+          success:(res)=> {
             if (res.data.code === 2000) {
-              that.globalData = res.data
+              this.globalData.access_token = res.data.access_token
+              this.globalData.openid = res.data.openid
             }
           }
         })

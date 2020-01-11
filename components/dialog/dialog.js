@@ -1,3 +1,4 @@
+const app =getApp()
 Component({
   options: {
     styleIsolation: 'apply-shared'
@@ -9,7 +10,7 @@ Component({
   lifetimes:{
     attached(){
       wx.request({
-        url: 'http://10.9.49.228:9999/api/user',
+        url: `${app.globalData.baseUrl}/api/user`,
         success:(res)=>{
           this.setData({
             userList:res.data.data

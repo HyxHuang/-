@@ -1,23 +1,23 @@
+const app = getApp()
 Page({
-  data:{
-    projectList:[]
+  data: {
+    projectList: []
   },
-  onShow(){
+  onShow() {
     wx.request({
-      url: 'http://10.9.49.228:9999/api/pj',
-      data:{
-        page:1,
-        limit:30
+      url: `${app.globalData.baseUrl}/api/pj`,
+      data: {
+        page: 1,
+        limit: 30
       },
-      success:(res)=>{
+      success: (res) => {
         this.setData({
-          projectList:res.data.data
+          projectList: res.data.data
         })
       }
     })
   },
- 
-  addProject(){
+  addProject() {
     wx.navigateTo({
       url: '/pages/subProject/subProject',
     })

@@ -1,4 +1,5 @@
 const store = require('store')
+const app =getApp()
 Page({
   data: {
     user: {}
@@ -7,7 +8,7 @@ Page({
 
     let that = this
     wx.request({
-      url: 'http://10.9.49.228:9999/api/profile',
+      url: `${app.globalData.baseUrl}/api/profile`,
       data: {
         token: store.get('tk')
       },

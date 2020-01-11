@@ -1,13 +1,10 @@
+const app =getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    name: '1',
-    email: '1',
-    username: '9033',
-    password: '123456'
+    name: '',
+    email: '',
+    username: '',
+    password: ''
   },
   handleTzToLg() {
     wx.navigateTo({
@@ -44,11 +41,10 @@ Page({
       password
     }
     wx.request({
-      url: 'http://10.9.49.228:9999/api/rg',
+      url: `${app.globalData.baseUrl}/api/rg`,
       method: 'post',
       data,
       success: function (res) {
-        console.log(res.data);
         if (res.data.code === 2000) {
           wx.showToast({
             title: '恭喜注册成功',
@@ -69,10 +65,7 @@ Page({
           })
         }
       }
-      // 省略其他参数
     })
-
-
   },
   handleinput(e) {
     let value = e.detail.value
@@ -82,8 +75,6 @@ Page({
     })
   },
   onLoad: function (options) {
-    // Do some initialize when page load
-    console.log(122);
-  },
+  }
 
 })

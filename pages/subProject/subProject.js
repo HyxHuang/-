@@ -1,4 +1,5 @@
 const moment=require('moment')
+const app = getApp()
 Page({
   data:{
     disabled:false,
@@ -43,13 +44,12 @@ Page({
       }
     },()=>{
       wx.request({
-        url: 'http://10.9.49.228:9999/api/addPj',
+        url: `${app.globalData.baseUrl}/api/addPj`,
         method:'post',
         data:{
           ...this.data.projectMessage
         },
         success(res){
-          console.log(res)
           if(res.data.code===2000){
             wx.navigateBack()
           }

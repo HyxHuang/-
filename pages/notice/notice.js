@@ -1,5 +1,6 @@
 // pages/notice/notice.js
 import { formatDay } from '../..//utils/util.js';
+const app = getApp()
 Page({
   data: {
     notices: [],
@@ -9,7 +10,7 @@ Page({
   onShow: function() {
     let that = this
     wx.request({
-      url: 'http://10.9.49.228:9999/api/notice',
+      url: `${app.globalData.baseUrl}/api/notice`,
       method: 'get',
       data: {
         page: 1,
